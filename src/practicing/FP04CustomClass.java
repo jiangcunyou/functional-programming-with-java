@@ -198,7 +198,9 @@ public class FP04CustomClass {
 		System.out.println(
 				courses.stream()
 						.collect(Collectors.groupingBy(Course::getCategory,
-								Collectors.mapping(Course::getName, Collectors.toList())))
+								Collectors.mapping(Course::getName, Collectors.toSet())))
 		);
+
+
     }
 }
